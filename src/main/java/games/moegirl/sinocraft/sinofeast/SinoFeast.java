@@ -7,6 +7,6 @@ public class SinoFeast {
     public static final String MODID = "sinofeast";
 
     public SinoFeast() {
-        
+
     }
 }
