@@ -10,6 +10,7 @@ import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 public class DataGenRegister {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
-        event.getGenerator().addProvider(new DefaultItemModelProvider(event.getGenerator(), "sinofeast", event.getExistingFileHelper()));
+        event.getGenerator().addProvider(new DefaultItemModelProvider(event.getGenerator(),
+                "sinofeast", event.getExistingFileHelper()));
     }
 }
