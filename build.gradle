@@ -19,7 +19,7 @@ apply plugin: 'org.parchmentmc.librarian.forgegradle'   // Parchment mappings.
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.18.1-1.0.0'
+version = '1.18.2-1.0.1'
 group = 'games.moegirl.sinocraft.sinofeast' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'sinofeast'
 
@@ -39,7 +39,7 @@ minecraft {
     //
     // Use non-default mappings at your own risk. They may not always work.
     // Simply re-run your setup task after changing the mappings to update your workspace.
-    mappings channel: 'parchment', version: '2022.01.23-1.18.1'
+    mappings channel: 'parchment', version: '2022.03.13-1.18.2'
 
     // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg') // Currently, this location cannot be changed from the default.
 
@@ -136,7 +136,7 @@ dependencies {
     // Specify the version of Minecraft to use. If this is any group other than 'net.minecraft', it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
-    minecraft 'net.minecraftforge:forge:1.18.1-39.0.66'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.0.32'
 
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
@@ -159,7 +159,7 @@ jar {
         attributes([
                 "Specification-Title"     : "sinofeast",
                 "Specification-Vendor"    : "SinoCraft Project Team",
-                "Specification-Version"   : "1", // We are version 1 of ourselves
+                "Specification-Version"   : "2", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
                 "Implementation-Vendor"   : "MoeGirl Games",
