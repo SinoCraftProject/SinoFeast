@@ -1,4 +1,4 @@
-package games.moegirl.sinocraft.sinofeast.datagen;
+package games.moegirl.sinocraft.sinofeast.data;
 
 import games.moegirl.sinocraft.sinocore.api.datagen.DefaultItemModelProvider;
 import games.moegirl.sinocraft.sinofeast.SinoFeast;
@@ -7,10 +7,10 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, modid = SinoFeast.MODID)
-public class DataGenRegister {
+public class SFData {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
         event.getGenerator().addProvider(new DefaultItemModelProvider(event.getGenerator(),
-                "sinofeast", event.getExistingFileHelper()));
+                SinoFeast.MODID, event.getExistingFileHelper()));
     }
 }
