@@ -5,7 +5,6 @@ plugins {
     id "dev.architectury.loom" version "0.11.0-SNAPSHOT" apply false
 }
 
-
 apply plugin: 'java'
 apply plugin: 'architectury-plugin'   // Parchment mappings.
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
@@ -33,14 +32,16 @@ loom {
     }
 }
 
-version = '1.18.2-1.0.1'
+version = '1.18.2-1.0.2'
 group = 'games.moegirl.sinocraft.sinofeast' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'sinofeast'
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
-println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
+println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version')
+        + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
+
 sourceSets.main.resources {
     srcDir 'src/generated/resources'
 }
@@ -66,11 +67,13 @@ repositories {
 dependencies {
     minecraft "com.mojang:minecraft:1.18.2"
     forge "net.minecraftforge:forge:1.18.2-40.1.0"
+
     mappings loom.layered() {
         officialMojangMappings()
         parchment("org.parchmentmc.data:parchment-1.18.2:2022.05.22@zip")
     }
-    modCompileOnly 'com.github.SinoCraftProject:SinoCore:main-SNAPSHOT'
+
+    modImplementation 'com.github.SinoCraftProject:SinoCore:main-SNAPSHOT'
 }
 
 // Example for how to get properties into the manifest for reading at runtime.

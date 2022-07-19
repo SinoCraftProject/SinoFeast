@@ -57,3 +57,9 @@ This grand banquet is for you.
     versionRange="[1.18.2,1.19)"
     ordering="NONE"
     side="BOTH"
+[[dependencies.sinofeast]]
+    modId="sinocore"
+    mandatory=true
+    versionRange="[1.0.0,2.0.0)"
+    ordering="NONE"
+    side="BOTH"

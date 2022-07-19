@@ -2,6 +2,7 @@ package games.moegirl.sinocraft.sinofeast.block;
 
 import games.moegirl.sinocraft.sinofeast.block.entity.StoveBlockEntity;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
@@ -29,13 +30,16 @@ public class StoveBlock extends HorizontalDirectionalBlock implements EntityBloc
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         super.createBlockStateDefinition(builder);
+        builder.add(FACING);
         builder.add(BURNING);
     }
 
     @Nullable
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-        return super.getStateForPlacement(context).setValue(BURNING, false);
+        return super.getStateForPlacement(context)
+                .setValue(FACING, Direction.NORTH)
+                .setValue(BURNING, false);
     }
 
     @Override

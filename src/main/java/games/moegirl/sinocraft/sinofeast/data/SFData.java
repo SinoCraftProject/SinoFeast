@@ -1,7 +1,8 @@
 package games.moegirl.sinocraft.sinofeast.data;
 
-import games.moegirl.sinocraft.sinocore.api.datagen.DefaultItemModelProvider;
 import games.moegirl.sinocraft.sinofeast.SinoFeast;
+import games.moegirl.sinocraft.sinofeast.block.SFBlocks;
+import games.moegirl.sinocraft.sinofeast.data.provider.BlockStateProvider;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
@@ -10,7 +11,16 @@ import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 public class SFData {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
-        event.getGenerator().addProvider(new DefaultItemModelProvider(event.getGenerator(),
-                SinoFeast.MODID, event.getExistingFileHelper()));
+        var generator = event.getGenerator();
+        var exHelper = event.getExistingFileHelper();
+
+        if (event.includeClient()) {
+            generator.addProvider(new BlockStateProvider(generator, SinoFeast.MODID,
+                    exHelper, SFBlocks.BLOCKS));
+        }
+
+        if (event.includeServer()) {
+
+        }
     }
 }

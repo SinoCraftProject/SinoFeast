@@ -17,7 +17,6 @@ public class SFBlockItems {
         BLOCK_ITEMS.register(bus);
     }
 
-
     public static RegistryObject<BlockItem> STOVE = BLOCK_ITEMS.register("stove", () -> new BlockItem(SFBlocks.STOVE.get(), new Item.Properties().tab(SFTabs.SINOFEAST)));
     public static RegistryObject<BlockItem> POT = BLOCK_ITEMS.register("pot", () -> new BlockItem(SFBlocks.POT.get(), new Item.Properties().tab(SFTabs.SINOFEAST)));
 }
