@@ -47,11 +47,20 @@ sourceSets.main.resources {
 
 repositories {
     maven {
+        name = 'Jitpack'
+        url = 'https://jitpack.io'
+    }
+
+    maven {
         name = 'ParchmentMC'
         url = 'https://maven.parchmentmc.org'
     }
 
-    maven { url 'https://jitpack.io' }
+    // JEI, Hello TT432, THANK YOU!
+    maven {
+        name = "Progwml6 maven"
+        url = "https://dvs1.progwml6.com/files/maven/"
+    }
 }
 
 dependencies {
@@ -61,7 +70,7 @@ dependencies {
         officialMojangMappings()
         parchment("org.parchmentmc.data:parchment-1.18.2:2022.05.22@zip")
     }
-    modCompileOnly 'com.github.SinoCraftProject:SinoCore:1.0.0'
+    modCompileOnly 'com.github.SinoCraftProject:SinoCore:main-SNAPSHOT'
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
