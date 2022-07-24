@@ -1,9 +1,9 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "sinofeast:pot_0",
-		"1": "sinofeast:pot_1",
-		"particle": "sinofeast:pot_0"
+		"0": "sinofeast:block/pot_0",
+		"1": "sinofeast:block/pot_1",
+		"particle": "sinofeast:block/pot_0"
 	},
 	"elements": [
 		{

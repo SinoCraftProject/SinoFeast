@@ -38,7 +38,7 @@ public class StoveBlock extends HorizontalDirectionalBlock implements EntityBloc
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         return super.getStateForPlacement(context)
-                .setValue(FACING, Direction.NORTH)
+                .setValue(FACING, context.getHorizontalDirection().getOpposite())
                 .setValue(BURNING, false);
     }
 
