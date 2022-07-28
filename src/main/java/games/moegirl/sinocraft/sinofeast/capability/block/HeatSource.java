@@ -113,15 +113,12 @@ public class HeatSource implements IHeatSource {
 
     @Override
     public ItemStack takeAshes(Item ash, int count) {
-        var stackOptional = ashes.stream().filter(e -> e.is(ash)).findAny();
-
-        if (stackOptional.isEmpty()) {
-            return ItemStack.EMPTY;
-        }
-
-        var stack = stackOptional.get();
-        stack.shrink(count);
-        return stack.copy();
+        return ashes.stream()
+                .filter(e -> e.is(ash))
+                .peek(stack -> stack.shrink(count))
+                .map(ItemStack::copy)
+                .findFirst()
+                .orElse(ItemStack.EMPTY);
     }
 
     @Override
