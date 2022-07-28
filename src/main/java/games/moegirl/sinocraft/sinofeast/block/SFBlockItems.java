@@ -13,7 +13,6 @@ public class SFBlockItems {
     public static final DeferredRegister<Item> BLOCK_ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, SinoFeast.MODID);
 
     public static void register(IEventBus bus) {
-        SinoFeast.getInstance().getLogger().info("Register block items.");
         BLOCK_ITEMS.register(bus);
     }
 

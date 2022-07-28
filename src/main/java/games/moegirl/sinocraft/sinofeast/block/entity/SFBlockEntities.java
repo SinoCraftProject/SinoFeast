@@ -14,7 +14,6 @@ public class SFBlockEntities {
 
 
     public static void register(IEventBus bus) {
-        SinoFeast.getInstance().getLogger().info("Register blocks.");
         BLOCK_ENTITIES.register(bus);
     }
 

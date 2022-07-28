@@ -12,7 +12,6 @@ public class SFBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, SinoFeast.MODID);
 
     public static void register(IEventBus bus) {
-        SinoFeast.getInstance().getLogger().info("Register blocks.");
         BLOCKS.register(bus);
     }
 

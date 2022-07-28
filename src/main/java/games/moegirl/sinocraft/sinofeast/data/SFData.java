@@ -5,6 +5,8 @@ import games.moegirl.sinocraft.sinofeast.block.SFBlockItems;
 import games.moegirl.sinocraft.sinofeast.block.SFBlocks;
 import games.moegirl.sinocraft.sinofeast.data.provider.BlockStateProvider;
 import games.moegirl.sinocraft.sinofeast.data.provider.ItemModelProvider;
+import games.moegirl.sinocraft.sinofeast.data.provider.language.LanguageProviderENUS;
+import games.moegirl.sinocraft.sinofeast.data.provider.language.LanguageProviderZHCN;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
@@ -25,7 +27,8 @@ public class SFData {
         }
 
         if (event.includeServer()) {
-
+            generator.addProvider(new LanguageProviderZHCN(generator, SinoFeast.MODID, "zh_cn"));
+            generator.addProvider(new LanguageProviderENUS(generator, SinoFeast.MODID, "en_us"));
         }
     }
 }

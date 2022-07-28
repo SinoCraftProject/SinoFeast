@@ -12,6 +12,9 @@ import org.apache.logging.log4j.Logger;
 @Mod(SinoFeast.MODID)
 public class SinoFeast {
     public static final String MODID = "sinofeast";
+    public static final String MC_VERSION = "1.18.2";
+    public static final String MOD_VERSION = "1.0.2";
+    public static final String VERSION = MC_VERSION + "-" + MOD_VERSION;
     public static final String NAME = "SinoFeast";
 
     private static SinoFeast INSTANCE = null;
@@ -20,13 +23,15 @@ public class SinoFeast {
     public SinoFeast() {
         INSTANCE = this;
 
-        LOGGER.info("Come here! A banquet for you.");
+        LOGGER.info("Loading SinoFeast. Ver: " + VERSION);
 
         final var bus = FMLJavaModLoadingContext.get().getModEventBus();
         SFBlocks.register(bus);
         SFItems.register(bus);
         SFBlockItems.register(bus);
         SFBlockEntities.register(bus);
+
+        LOGGER.info("Come here! A banquet for you.");
     }
 
     public static SinoFeast getInstance() {
