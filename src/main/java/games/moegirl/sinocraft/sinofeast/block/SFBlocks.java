@@ -1,6 +1,5 @@
 package games.moegirl.sinocraft.sinofeast.block;
 
-import ca.weblite.objc.Proxy;
 import games.moegirl.sinocraft.sinofeast.SinoFeast;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -17,4 +16,6 @@ public class SFBlocks {
 
     public static final RegistryObject<Block> STOVE = BLOCKS.register("stove", StoveBlock::new);
     public static final RegistryObject<Block> POT = BLOCKS.register("pot", PotBlock::new);
+
+//    public static final RegistryObject<Block>
 }

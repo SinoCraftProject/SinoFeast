@@ -1,6 +1,7 @@
 package games.moegirl.sinocraft.sinofeast.capability.block;
 
 import net.minecraft.core.NonNullList;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
@@ -124,5 +125,16 @@ public class HeatSource implements IHeatSource {
     @Override
     public NonNullList<ItemStack> getAllAshes() {
         return ashes;
+    }
+
+    @Override
+    public CompoundTag serializeNBT() {
+        // Todo: qyl27.
+        return null;
+    }
+
+    @Override
+    public void deserializeNBT(CompoundTag arg) {
+        // Todo: qyl27.
     }
 }

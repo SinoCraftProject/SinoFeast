@@ -1,15 +1,17 @@
 package games.moegirl.sinocraft.sinofeast.capability.block;
 
 import net.minecraft.core.NonNullList;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.common.util.INBTSerializable;
 
 /**
  * All machine Block Entity that can export heat must implement this interface
  *
  * @author Infinity_rain(qyl27)
  */
-public interface IHeatSource {
+public interface IHeatSource extends INBTSerializable<CompoundTag> {
     /**
      * Get heat
      *

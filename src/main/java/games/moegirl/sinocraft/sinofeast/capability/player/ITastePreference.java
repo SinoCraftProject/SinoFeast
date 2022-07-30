@@ -1,5 +1,7 @@
 package games.moegirl.sinocraft.sinofeast.capability.player;
 
+import games.moegirl.sinocraft.sinocore.api.capability.IPlayerCapability;
+
 import java.util.List;
 
 /**
@@ -7,6 +9,6 @@ import java.util.List;
  *
  * @author qyl27
  */
-public interface ITastePreference {
+public interface ITastePreference extends IPlayerCapability {
 
 }
